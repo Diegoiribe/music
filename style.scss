@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: #2b2b2b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	transition: 0.5s;
+	.letra {
+		visibility: hidden;
+	}
+	.letraa {
+		visibility: hidden;
+	}
+	&.active {
+		background: #c1b1b1da;
+		.letra {
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			border-right: 4px solid;
+			width: 48ch;
+
+			animation: typing 2s steps(48), blink 0.5s infinite step-end alternate;
+			overflow: hidden;
+			visibility: visible;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+		}
+
+		@keyframes blink {
+			50% {
+				border-color: transparent;
+			}
+		}
+		.letraa {
+			display: block;
+			font-family: monospace;
+			white-space: nowrap;
+			border-right: 4px solid;
+			width: 48ch;
+			margin: 0 0 350px 0;
+
+			animation: typing 2s steps(48), blink 0.5s infinite step-end alternate;
+			overflow: hidden;
+			visibility: visible;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+		}
+
+		@keyframes blink {
+			50% {
+				border-color: transparent;
+			}
+		}
+	}
+	&.activem {
+		background: #f8f8f8;
+		.letra {
+			visibility: hidden;
+		}
+		.letraa {
+			visibility: hidden;
+		}
+	}
+}
+
+#toggle {
+	position: absolute;
+	display: block;
+	width: 320px;
+	height: 160px;
+	border-radius: 160px;
+	background: #222;
+	transition: 0.5s;
+	box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1), inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+	.indicator {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		background: linear-gradient(to bottom, #444, #222);
+		cursor: pointer;
+		transform: scale(0.9);
+		box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.2), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+		transition: 0.5s;
+		.pausa {
+			visibility: hidden;
+		}
+		.play {
+			position: absolute;
+			text-align: center;
+			font-size: 40px;
+			padding: 62px 0 0 50px;
+			visibility: visible;
+		}
+	}
+
+	&.active {
+		background: #faf0f0da;
+		box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+
+		.indicator {
+			left: 80px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgb(223, 212, 212), inset 0 -4px 4px rgb(223, 212, 212);
+			background: linear-gradient(to bottom, #fff7f7da, #ebe4e4da);
+		}
+		.pausa {
+			position: absolute;
+			text-align: center;
+			font-size: 40px;
+			padding: 60px 0 0 65px;
+			visibility: visible;
+		}
+
+		.play {
+			position: absolute;
+			text-align: center;
+			font-size: 40px;
+			padding: 60px 0 0 65px;
+			visibility: visible;
+			visibility: hidden;
+		}
+	}
+	&.activem {
+		background: #ffffff;
+		box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+		.indicator {
+			left: 160px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgba(255, 255, 255, 1), inset 0 -4px 4px rgba(255, 255, 255, 1);
+			background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+
+			.pausa {
+				visibility: hidden;
+			}
+
+			.play {
+				visibility: visible;
+			}
+		}
+	}
+}

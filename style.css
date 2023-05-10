@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+body .letra {
+  visibility: hidden;
+}
+body .letraa {
+  visibility: hidden;
+}
+body.active {
+  background: rgba(193, 177, 177, 0.8549019608);
+}
+body.active .letra {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 48ch;
+  animation: typing 2s steps(48), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+  visibility: visible;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+body.active .letraa {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 48ch;
+  margin: 0 0 350px 0;
+  animation: typing 2s steps(48), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+  visibility: visible;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+body.activem {
+  background: #f8f8f8;
+}
+body.activem .letra {
+  visibility: hidden;
+}
+body.activem .letraa {
+  visibility: hidden;
+}
+
+#toggle {
+  position: absolute;
+  display: block;
+  width: 320px;
+  height: 160px;
+  border-radius: 160px;
+  background: #222;
+  transition: 0.5s;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1), inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #444, #222);
+  cursor: pointer;
+  transform: scale(0.9);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.2), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+}
+#toggle .indicator .pausa {
+  visibility: hidden;
+}
+#toggle .indicator .play {
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+  padding: 62px 0 0 50px;
+  visibility: visible;
+}
+#toggle.active {
+  background: rgba(250, 240, 240, 0.8549019608);
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+#toggle.active .indicator {
+  left: 80px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgb(223, 212, 212), inset 0 -4px 4px rgb(223, 212, 212);
+  background: linear-gradient(to bottom, rgba(255, 247, 247, 0.8549019608), rgba(235, 228, 228, 0.8549019608));
+}
+#toggle.active .pausa {
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+  padding: 60px 0 0 65px;
+  visibility: visible;
+}
+#toggle.active .play {
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+  padding: 60px 0 0 65px;
+  visibility: visible;
+  visibility: hidden;
+}
+#toggle.activem {
+  background: #ffffff;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+#toggle.activem .indicator {
+  left: 160px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgb(255, 255, 255), inset 0 -4px 4px rgb(255, 255, 255);
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+}
+#toggle.activem .indicator .pausa {
+  visibility: hidden;
+}
+#toggle.activem .indicator .play {
+  visibility: visible;
+}/*# sourceMappingURL=style.css.map */
