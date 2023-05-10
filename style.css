@@ -144,4 +144,17 @@ body.activem .letraa {
 }
 #toggle.activem .indicator .play {
   visibility: visible;
+}
+
+@media (max-width: 400px) {
+  body.active .letra {
+    font-size: 10px;
+  }
+  body.active .letraa {
+    font-size: 10px;
+    margin: 0 0 200px 0;
+  }
+  #toggle {
+    position: relative;
+  }
 }/*# sourceMappingURL=style.css.map */
