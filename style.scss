@@ -11,11 +11,13 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	transition: 0.5s;
+
 	.letra {
 		visibility: hidden;
 	}
 	.letraa {
 		visibility: hidden;
+		margin: 0 0 180px 0;
 	}
 	&.active {
 		background: #c1b1b1da;
@@ -168,3 +170,4 @@ body {
 		position: relative;
 	}
 }
+
