@@ -18,6 +18,7 @@ body .letra {
 }
 body .letraa {
   visibility: hidden;
+  margin: 0 0 180px 0;
 }
 body.active {
   background: rgba(193, 177, 177, 0.8549019608);
